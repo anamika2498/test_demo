@@ -1,0 +1,12 @@
+-----------
+- name : ping servers
+  hosts : localhost
+  becomme : false
+  ignore_errors: true
+  tasks:
+    - name:ping server
+      ping :
+      register : ping_server
+    - debug:
+      msg: {{ping_server}}
+ 
